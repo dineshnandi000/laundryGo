@@ -1,0 +1,27 @@
+<div class="container">
+  
+ <div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">No. of Clothes</th>
+            <th scope="col">No.of days</th>
+            <th scope="col">Request type</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let form of forms">
+            <td>{{ form.id }}</td>
+            <td>{{ form.cl }}</td>
+            <td>{{ form.day }}</td>
+            <td>{{ form.sl }}</td>
+            <td>{{ form.add }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>

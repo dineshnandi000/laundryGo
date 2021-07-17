@@ -1,0 +1,24 @@
+ <div style="background-color: gray;" class="form-container" id="myForm">
+     
+    <form #myForm="ngForm" style="width: 50%;" (ngSubmit)="submitForm(); myForm.reset()">
+    <h1>Laundry Request</h1>
+    <label for="cloth"><b>No. of Cloths</b></label>
+    <input #inputRef [(ngModel)]="form.cl" type="text" id="cl" placeholder="Enter No. of Cloths" name="cloth" required>
+    <label for="days"><b>No. of days</b></label>
+    <input [(ngModel)]="form.day" type="text" id="day" placeholder="Enter No. of days" name="day" required>
+    <label for="type" style="padding-right: 10px;"><b>Select Type</b></label><br>
+
+    <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Please Select</mat-label>
+        <mat-select [(ngModel)]="form.sl" (selectionChange)="selectChangeHandler($event)" name="type" id="sl">
+            <mat-option *ngFor="let type of types" [value]="type.value">{{type.viewValue}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <label for="Address"><b>Address</b></label>
+    <input [(ngModel)]="form.add" type="text" id="add" placeholder="Enter Address" name="address" required>
+    <button type="submit" mat-button style="background: #673ab7;" id="sub" class="btn">Submit</button>
+    <button type="button" routerLink="/home" mat-button style="background: #673ab7;" id="cls" class="btn cancel" (click)="closeForm()">Close</button>
+    </form>
+</div>
+ 

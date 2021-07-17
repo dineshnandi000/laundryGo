@@ -1,0 +1,21 @@
+.text-block{
+    position: absolute;
+    top:65px;
+    left: 400px;
+    color: #673ab7;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+table{
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    font-style: italic;
+    font-weight: bold;
+}
+
+td,th{
+    text-align: left;
+    padding:8px;
+}
+
